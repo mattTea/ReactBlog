@@ -20,7 +20,9 @@ var About = () => {
           <img src="GitHub-Mark-64px.png" style="width:26px;height:26px;border:0;vertical-align:top"/>
         </a>
         <a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical">Tweet</a>
-        <g:plusone></g:plusone>
+        {/* <script src="https://apis.google.com/js/platform.js" async defer></script> */}
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+        <g-plusone></g-plusone>
       </div>
     </div>
   );

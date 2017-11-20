@@ -10,23 +10,23 @@ var NavHeader = (props) => {
         <ul className="menu">
         {/* <ul class="w3-navbar w3-black" id="navbar"> */}
           <li>
-            <IndexLink to="/">
-              <img src={require('../../public/images/CaravanGig2.png')} style={{maxWidth: "3.5em", maxHeight: "3.5em"}}></img>
+            <IndexLink to="/">Home
+              {/* <img src={require('../../public/images/CaravanGig2.png')} style={{maxWidth: "3.5em", maxHeight: "3.5em"}}></img> */}
             </IndexLink>
           </li>
           <li>
-            <Link to="/articles">
-              <img src={require('../../public/images/CaravanGig2.png')} style={{maxWidth: "3.5em", maxHeight: "3.5em"}}></img>
+            <Link to="/articles">Articles
+              {/* <img src={require('../../public/images/CaravanGig2.png')} style={{maxWidth: "3.5em", maxHeight: "3.5em"}}></img> */}
             </Link>
           </li>
           <li>
-            <Link to="/side-projects">
-              <img src={require('../../public/images/CaravanGig2.png')} style={{maxWidth: "3.5em", maxHeight: "3.5em"}}></img>
+            <Link to="/side-projects">SPs
+              {/* <img src={require('../../public/images/CaravanGig2.png')} style={{maxWidth: "3.5em", maxHeight: "3.5em"}}></img> */}
             </Link>
           </li>
           <li>
-            <Link to="/about">
-              <img src={require('../../public/images/CaravanGig2.png')} style={{maxWidth: "3.5em", maxHeight: "3.5em"}}></img>
+            <Link to="/about">About
+              {/* <img src={require('../../public/images/CaravanGig2.png')} style={{maxWidth: "3.5em", maxHeight: "3.5em"}}></img> */}
             </Link>
           </li>
         </ul>

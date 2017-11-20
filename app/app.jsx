@@ -17,11 +17,12 @@ require('style!css!sass!applicationStyles'); //applicationStyles module loaded u
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
-      <Route path="blog" component={Blog}/>
-      <Route path="articles" component={BlogList}/>
-      <Route path="side-projects" component={SideProjects}/>
-      <Route path="about" component={About}/>
-      <IndexRoute component={Blog}/> {/* this renders if none of the above routes are matched */}
+      {/* <Route path="blog" component={Blog}/> */}
+      {/* <Route path="articles" component={BlogList}/> */}
+      {/* <Route path="side-projects" component={SideProjects}/> */}
+      {/* <Route path="about" component={About}/> */}
+      {/* <IndexRoute component={About}/> */}
+      {/* <IndexRoute component={Blog}/> {/* this renders if none of the above routes are matched */}
     </Route>
   </Router>,
   document.getElementById('app')
