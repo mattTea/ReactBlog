@@ -5,7 +5,7 @@ var Main = require('Main');
 var Blog = require('Blog'); //build component
 var BlogList = require('BlogList'); //build component
 var SideProjects = require('SideProjects'); //build component
-var About = require('About'); //build component
+var About = require('About');
 
 // Load foundation
 require('style!css!foundation-sites/dist/foundation.min.css')
@@ -20,8 +20,8 @@ ReactDOM.render(
       {/* <Route path="blog" component={Blog}/> */}
       {/* <Route path="articles" component={BlogList}/> */}
       {/* <Route path="side-projects" component={SideProjects}/> */}
-      {/* <Route path="about" component={About}/> */}
-      {/* <IndexRoute component={About}/> */}
+      <Route path="about" component={About}/>
+      <IndexRoute component={About}/>
       {/* <IndexRoute component={Blog}/> {/* this renders if none of the above routes are matched */}
     </Route>
   </Router>,

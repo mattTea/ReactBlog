@@ -6,11 +6,12 @@ var NavHeader = require('NavHeader');
 
 var Main = (props) => {
   return (
+    // <div style={styles}>
     <div>
-      <div>
-        <NavHeader/>
-        <div>
-          <p>Main.jsx Rendered</p>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+      <NavHeader/>
+      <div className="row">
+        <div className="columns small-10 medium-6 large-6 small-centered">
           {props.children}
         </div>
       </div>

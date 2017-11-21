@@ -1,0 +1,50 @@
+h2 {
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  max-width: 600px;
+  padding: 20px 5%;
+}
+
+.authorImg {
+  display: block;
+  width: 30%;
+  margin: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  border-radius: 50% 50%;
+}
+
+.gitHubImg {
+  width: 26px;
+  height: 26px;
+  border: 0;
+  vertical-align: top;
+}
+
+.social {
+  text-align: center;
+  line-height: 40px;
+}
+
+@media (max-width: 343px) {
+  /* add style required under 343px width */
+  /* is this needed when using columns? */
+  .author-blurb {
+    font-size: 12px;
+  }
+  p {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* add style required under 600px width */
+  /* is this needed when using columns? */
+  h2 {
+    font-size: 18px;
+  }
+}
