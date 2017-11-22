@@ -24,6 +24,8 @@ module.exports = {
     alias: {
       Main: 'app/components/Main.jsx',
       NavHeader: 'app/components/NavHeader.jsx',
+      Header: 'app/components/Header.jsx',
+      Footer: 'app/components/Footer.jsx',
       Blog: 'app/components/Blog.jsx',
       BlogList: 'app/components/BlogList.jsx',
       SideProjects: 'app/components/SideProjects.jsx',

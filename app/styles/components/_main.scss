@@ -1,0 +1,17 @@
+html, body, #app, #app>div {
+  height: 100%;
+  overflow: auto;
+  overflow-y: scroll; /* has to be scroll, not auto for the webkit touch to work */
+  -webkit-overflow-scrolling: touch;
+  font-family:Questrial;
+  font-size:18px;
+  line-height: 1.5
+}
+
+img {
+  margin-bottom: -5px
+}
+
+a {
+  color: inherit
+}

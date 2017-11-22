@@ -19,7 +19,7 @@ var About = () => {
           <img className="gitHubImg" src={require('../../public/images/GitHub-Mark-64px.png')}></img>
         </a>
         <a href="http://twitter.com/share" className="twitter-share-button" data-count="vertical">Tweet</a>
-        <div className="g-plusone"></div>
+        <a><div className="g-plusone"></div></a>
       </div>
     </div>
   );

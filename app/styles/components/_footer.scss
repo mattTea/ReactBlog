@@ -1,0 +1,16 @@
+.container {
+    margin: auto;
+    max-width: 650px;
+    padding: 20px 5%;
+}
+
+#footer {
+    padding-top: 2em;
+    padding-bottom: 0.8em;
+    color: white;
+    font-family: Questrial;
+    font-weight: bold;
+    text-align: center;
+    background-image: url(../../public/images/blog-footer.jpg);
+    background-size: cover;
+}

@@ -1,0 +1,51 @@
+.headline {
+  padding: 20px 5% 15px;
+  color: white;
+  font-family: Questrial;
+  background-image: url(../../public/images/blog-banner.jpg);
+  background-size: cover;
+  text-align:center;
+  margin-top: 30px;
+  h1 {
+    font-family: Questrial;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    padding-top: 0.75em;
+  }
+  h2 {
+    font-family: Questrial;
+    text-align: center;
+    font-size: 27px;
+    font-weight: bold;
+    padding-top: 0.7em;
+    padding-bottom: 0.6em;
+  }
+}
+
+.container {
+  margin: auto;
+  max-width: 650px;
+  padding: 20px 5%;
+}
+
+#blurb {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+@media (max-width: 343px) {
+  /* add style required under 343px width */
+  /* is this needed when using columns? */
+  p {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* add style required under 600px width */
+  /* is this needed when using columns? */
+  h2 {
+    font-size: 18px;
+  }
+}

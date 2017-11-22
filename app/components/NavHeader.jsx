@@ -7,7 +7,7 @@ var NavHeader = (props) => {
   return (
     <div>
       <div className="top-bar-center show-for-small-only">
-        <ul className="menu">
+        <ul className="menu" id="navbar">
         {/* <ul class="w3-navbar w3-black" id="navbar"> */}
           <li>
             <IndexLink to="/">Home
@@ -32,7 +32,7 @@ var NavHeader = (props) => {
         </ul>
       </div>
       <div className="top-bar-left show-for-medium">
-        <ul className="menu">
+        <ul className="menu" id="navbar">
         {/* <ul class="w3-navbar w3-black" id="navbar"> */}
           <li>
             <IndexLink to="/" activeClassName="active-link">Home</IndexLink>
