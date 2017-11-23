@@ -1,5 +1,6 @@
 var React = require('react'); //try import React from 'react'
 
+// error when navigating to social section (need componentDidMount? as not rendering properly) 
 
 var About = () => {
 

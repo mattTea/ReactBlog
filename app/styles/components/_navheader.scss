@@ -1,6 +1,14 @@
-#navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: white;
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.top-bar-center .show-for-small-only {
+  text-align: center;
+}
+
+#navbar-small {
+  // centre menu images horizontally
 }

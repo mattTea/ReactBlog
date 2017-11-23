@@ -1,35 +1,27 @@
 var React = require('react');
 
-
 var Blog = React.createClass({ //try not to use .createClass (deprecated)
   getInitialState: function () {
     return {
-      xxx: false,
-      yyy: 'music'
+      title: 'blogHoldingPage'
     }
   },
 
-  //copied from TinyGigs as example!
   render: function () {
-    var {isLoading, gigType, gigs} = this.state;
+    var {title} = this.state;
 
-    function renderGigList () {
-      if (isLoading) {
-        return <h5 className="text-center page-loading">Getting gigs...</h5>;
-      } else if (gigs) {
-        return (
-          <div>
-            <GigList gigs={gigs} gigType={gigType}/>
-          </div>
-        )
-      }
+    function renderBlog () {
+      return (
+        <div>
+          <h5>{title}</h5>;
+        </div>
+      )
     }
-
-
 
     return (
       <div>
-
+        {renderBlog}
+        <p>Blog component rendered</p>
       </div>
     );
   }
