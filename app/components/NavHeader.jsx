@@ -2,6 +2,11 @@ var React = require('react');
 
 var {Link, IndexLink} = require('react-router');
 
+var activeLinkStyle = {
+  fontWeight: "bold",
+  color: "white"
+}
+
 var NavHeader = (props) => {
 
   return (
@@ -10,22 +15,22 @@ var NavHeader = (props) => {
         <ul className="menu" id="navbar-small">
           <li>
             <IndexLink to="/">
-              <img src={require('../../public/images/home.png')} style={{maxWidth: "1.5em", maxHeight: "1.5em"}}></img>
+              <img src={require('../../public/images/home-white.png')}></img>
             </IndexLink>
           </li>
           <li>
             <Link to="/articles">
-              <img src={require('../../public/images/blogs.png')} style={{maxWidth: "1.5em", maxHeight: "1.5em"}}></img>
+              <img src={require('../../public/images/pen-white.png')}></img>
             </Link>
           </li>
           <li>
             <Link to="/side-projects">
-              <img src={require('../../public/images/side-projects.png')} style={{maxWidth: "1.5em", maxHeight: "1.5em"}}></img>
+              <img src={require('../../public/images/projects-white.png')}></img>
             </Link>
           </li>
           <li>
             <Link to="/about">
-              <img src={require('../../public/images/about.png')} style={{maxWidth: "1.5em", maxHeight: "1.5em"}}></img>
+              <img src={require('../../public/images/about-white.png')}></img>
             </Link>
           </li>
         </ul>
@@ -33,16 +38,16 @@ var NavHeader = (props) => {
       <div className="top-bar-left show-for-medium">
         <ul className="menu" id="navbar-medium">
           <li>
-            <IndexLink to="/" activeClassName="active-link">Home</IndexLink>
+            <IndexLink to="/" activeStyle={activeLinkStyle}>Home</IndexLink>
           </li>
           <li>
-            <Link to="/articles" activeClassName="active-link">Blogs</Link>
+            <Link to="/articles" activeStyle={activeLinkStyle}>Blogs</Link>
           </li>
           <li>
-            <Link to="/side-projects" activeClassName="active-link">Side Projects</Link>
+            <Link to="/side-projects" activeStyle={activeLinkStyle}>Side Projects</Link>
           </li>
           <li>
-            <Link to="/about" activeClassName="active-link">About</Link>
+            <Link to="/about" activeStyle={activeLinkStyle}>About</Link>
           </li>
         </ul>
       </div>

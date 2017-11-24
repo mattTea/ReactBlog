@@ -15,7 +15,7 @@ var Main = (props) => {
       <NavHeader/>
       <Header/>
       <div className="row">
-        <div className="columns small-10 medium-8 large-8 small-centered">
+        <div className="columns small-12 medium-8 large-8 small-centered">
           {props.children}
         </div>
       </div>

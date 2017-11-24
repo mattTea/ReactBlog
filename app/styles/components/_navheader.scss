@@ -2,7 +2,12 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: white;
+  color: white;
+  background-color: rgba(170, 131, 64, 0.85);
+  a:hover {
+    color: white;
+    font-weight: bold;
+  }
 }
 
 .top-bar-center .show-for-small-only {
@@ -11,4 +16,21 @@
 
 #navbar-small {
   // centre menu images horizontally
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::before {
+    display: none;
+  }
+  &::after {
+    display: none;
+  }
+  img {
+    max-width: 1.25em;
+    max-height: 1.25em;
+  }
+  li {
+    padding-left: 0.15em;
+    padding-right: 0.15em;
+  }
 }
