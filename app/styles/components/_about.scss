@@ -29,18 +29,13 @@
   vertical-align: top;
 }
 
-.social {
-  text-align: center;
-  line-height: 40px;
-  a {
-    padding-left: 1%;
-    padding-right: 1%;
-  }
-}
-
 @media (max-width: 343px) {
   /* add style required under 343px width */
-  /* is this needed when using columns? */
+  .container {
+    h2 {
+      font-size: 18px;
+    }
+  }
   .author-blurb {
     font-size: 12px;
   }
@@ -51,7 +46,6 @@
 
 @media (max-width: 600px) {
   /* add style required under 600px width */
-  /* is this needed when using columns? */
   h2 {
     font-size: 18px;
   }

@@ -30,6 +30,7 @@ module.exports = {
       BlogList: 'app/components/BlogList.jsx',
       SideProjects: 'app/components/SideProjects.jsx',
       About: 'app/components/About.jsx',
+      Social: 'app/components/Social.jsx',
       applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']

@@ -1,5 +1,5 @@
 .headline {
-  padding: 20px 5% 15px;
+  padding: 20px 5%;
   color: white;
   font-family: Questrial;
   background-image: url(../../public/images/blog-banner.jpg);
@@ -21,22 +21,19 @@
     padding-top: 0.7em;
     padding-bottom: 0.6em;
   }
+  p {
+    font-weight: bold;
+  }
 }
 
 .container {
   margin: auto;
   max-width: 650px;
-  padding: 20px 5%;
-}
-
-#blurb {
-  font-size: 15px;
-  font-weight: bold;
+  padding: 20px 5% 15px;
 }
 
 @media (max-width: 343px) {
   /* add style required under 343px width */
-  /* is this needed when using columns? */
   p {
     font-size: 10px;
   }
@@ -44,8 +41,9 @@
 
 @media (max-width: 600px) {
   /* add style required under 600px width */
-  /* is this needed when using columns? */
-  h2 {
-    font-size: 18px;
+  .headline .container {
+    h2 {
+      font-size: 18px;
+    }
   }
 }

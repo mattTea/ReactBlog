@@ -1,0 +1,72 @@
+h2 {
+  text-align: center;
+}
+
+.container {
+  max-width: 680px;
+  margin: auto;
+  padding: 20px 5%;
+  h2 {
+    font-family: Questrial;
+    text-align: center;
+    font-size: 27px;
+    font-weight: bold;
+    padding-top: 0.75em;
+    padding-bottom: 0.6em;
+  }
+  h4 {
+    font-size: 16px;
+    font-family: Questrial;
+    font-weight: bold;
+    margin-top: 0.75em;
+  }
+}
+
+.proj-container {
+  margin-bottom: 10%;
+  margin-top: 10%;
+  .clear {
+    clear: both;
+  }
+}
+
+.proj-thumb img {
+  float: left;
+  width: 30%;
+  height: 30%;
+  min-width: 80px;
+  min-height: 80px;
+  max-width: 120px;
+  max-width: 120px;
+  padding-right: 1em;
+  padding-top: 0.5em;
+}
+.proj-content {
+  font-size: 16px;
+  overflow: auto;
+  padding-top: 0.25em;
+}
+
+@media (max-width: 343px) {
+  /* add style required under 343px width */
+  .container {
+    h4 {
+      font-size: 10px;
+      padding-top: 0.1em;
+    }
+    h2 {
+      font-size: 18px;
+    }
+  }
+  p {
+    font-size: 10px;
+  }
+  .proj-thumb img {
+    min-width: 60px;
+    min-height: 60px;
+    margin-top: 0em;
+  }
+  .author-blurb {
+      font-size: 12px;
+  }
+}

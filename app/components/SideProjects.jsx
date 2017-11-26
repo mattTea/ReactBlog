@@ -1,30 +1,53 @@
 var React = require('react');
 
-var SideProjects = React.createClass({ //try not to use .createClass (deprecated)
-  getInitialState: function () {
-    return {
-      title: 'SideProjectsHoldingPage'
-    }
-  },
+var SideProjects = () => {
 
-  render: function () {
-    var {title} = this.state;
-
-    function renderSideProjects () {
-      return (
-        <div>
-          <h5>{title}</h5>;
-        </div>
-      )
-    }
-
-    return (
-      <div>
-        {renderSideProjects}
-        <p>SideProjects component rendered</p>
+  return (
+    // Side Project Details
+    <div className="container">
+      <h2>the side projects...</h2>
+      <div className="author-blurb">
+        <p><br/>There's mention of numerous side projects throughout this blog. Browse them all here.<br/></p>
       </div>
-    );
-  }
-});
+
+      <a href="https://tinygigs.matttea.com/" target="_blank"><div className="proj-container">
+        <div className="proj-thumb"><img src={require('../../public/images/CaravanGig2.png')}></img></div>
+        <div className="proj-content">
+          <h4>Tiny Gigs</h4>
+          <p>A simple React web app for live music in small London venues.</p>
+        </div>
+        <div className="clear"></div>
+      </div></a>
+
+      <a href="https://blog.matttea.com" target="_blank"><div className="proj-container">
+        <div className="proj-thumb"><img src={require('../../public/images/B.png')}></img></div>
+        <div className="proj-content">
+          <h4>My Blog</h4>
+          <p>You're already here!<br/>The node.js web app described in the content of this blog.</p>
+        </div>
+        <div className="clear"></div>
+      </div></a>
+
+      {/* <a href="https://bleippsons.herokuapp.com/" target="_blank"><div class="proj-container"> */}
+      <a href="#"><div className="proj-container">
+        <div className="proj-thumb"><img src={require('../../public/images/boss.png')}></img></div>
+        <div className="proj-content">
+          <h4>The Plan</h4>
+          <p>A node.js anniversary and memory web app for some friends. (Link disabled).</p>
+        </div>
+        <div className="clear"></div>
+      </div></a>
+
+      <a href="https://matttea-partner-api.herokuapp.com/" target="_blank"><div className="proj-container">
+        <div className="proj-thumb"><img src={require('../../public/images/gmail-details.png')}></img></div>
+        <div className="proj-content">
+          <h4>Partner Details Gmail plug-in</h4>
+          <p>A node.js app to return user details. Prototype api for Gmail plug-in. (Search 'matt@matt.com').</p>
+        </div>
+        <div className="clear"></div>
+      </div></a>
+    </div>
+  );
+}
 
 module.exports = SideProjects;
