@@ -31,6 +31,7 @@ module.exports = {
       SideProjects: 'app/components/SideProjects.jsx',
       About: 'app/components/About.jsx',
       Social: 'app/components/Social.jsx',
+      cosmic: 'app/api/cosmic.jsx',
       applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']

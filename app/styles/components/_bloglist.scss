@@ -1,0 +1,30 @@
+// container for blog may need a margin-bottom: 2em;
+
+.title {
+  padding-top: 1em;
+  color: saddlebrown;
+  font-size: 100%;
+  font-weight: bold;
+  text-align: left;
+}
+
+.preview {
+  font-size: 90%;
+}
+
+.author {
+  color: grey;
+  font-size: 80%;
+  float: left;
+}
+
+.created {
+  color: grey;
+  font-size: 80%;
+  margin-left: 2em;
+  float:left;
+}
+
+.clear {
+  clear:both;
+}
