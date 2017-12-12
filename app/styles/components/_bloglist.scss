@@ -1,7 +1,28 @@
 // container for blog may need a margin-bottom: 2em;
 
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.container {
+  margin: auto;
+  max-width: 680px;
+  padding: 20px 5%;
+  h2 {
+    font-family: Questrial;
+    text-align: center;
+    font-size: 27px;
+    font-weight: bold;
+    padding-top: 0.75em;
+    padding-bottom: 0.6em;
+  }
+}
+
 .title {
   padding-top: 1em;
+  padding-bottom: 1em;
   color: saddlebrown;
   font-size: 100%;
   font-weight: bold;
@@ -15,6 +36,7 @@
 .author {
   color: grey;
   font-size: 80%;
+  margin-bottom: 2em;
   float: left;
 }
 
@@ -22,9 +44,26 @@
   color: grey;
   font-size: 80%;
   margin-left: 2em;
+  margin-bottom: 2em;
   float:left;
 }
 
 .clear {
   clear:both;
+}
+
+@media (max-width: 343px) {
+  /* add style required under 343px width */
+  .container {
+    h2 {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  /* add style required under 600px width */
+  h2 {
+    font-size: 18px;
+  }
 }
