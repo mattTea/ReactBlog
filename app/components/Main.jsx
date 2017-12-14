@@ -2,6 +2,7 @@ var React = require('react');
 
 var NavHeader = require('NavHeader');
 var Header = require('Header');
+var Home = require('Home');
 var Blog = require('Blog');
 var BlogList = require('BlogList');
 var SideProjects = require('SideProjects');

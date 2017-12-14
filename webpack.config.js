@@ -26,6 +26,8 @@ module.exports = {
       NavHeader: 'app/components/NavHeader.jsx',
       Header: 'app/components/Header.jsx',
       Footer: 'app/components/Footer.jsx',
+      Home: 'app/components/Home.jsx',
+      Comments: 'app/components/Comments.jsx',
       Blog: 'app/components/Blog.jsx',
       BlogList: 'app/components/BlogList.jsx',
       SideProjects: 'app/components/SideProjects.jsx',
