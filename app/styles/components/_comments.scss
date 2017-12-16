@@ -1,0 +1,29 @@
+.container {
+  margin: inherit;
+  max-width: 680px;
+  padding: 20px 5%;
+}
+
+.comments {
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  /* add style required under 600px width */
+  .comments {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 343px) {
+  /* add style required under 343px width */
+  h4 {
+    font-size: 11px;
+  }
+  p {
+    font-size: 10px;
+  }
+  .comments {
+    font-size: 12px;
+  }
+}

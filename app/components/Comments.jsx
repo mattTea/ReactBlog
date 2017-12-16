@@ -5,6 +5,8 @@
 
 var React = require('react');
 
+import ReactHtmlParser from 'react-html-parser';
+
 var cosmicComments = require('cosmicComments');
 
 var Comments = React.createClass({
@@ -53,50 +55,34 @@ var Comments = React.createClass({
       if (comments.objects.length > 0) {
         for (var i = 0; i < comments.objects.length; i++) {
           if (comments.objects[i].metadata !== null && comments.objects[i].metadata.blogslugname === blogSlug) {
-            blogComments.push(comments.objects[i]);
+            blogComments.push(comments.objects[i].content);
           }
         }
-        return ('blogComments.length: ' + blogComments.length);
+        console.log('blogComments.length: ' + blogComments.length);
       }
+
+      const commentsList = blogComments.map((blogComments, index) =>
+        <li key={index}>
+          <div className="comments">{ReactHtmlParser(blogComments)}</div>
+        </li>
+      );
+
+      return (
+        <div>
+          <h4>comments...</h4>
+          <ul>{commentsList}</ul>
+        </div>
+      )
     }
-
-
-      // var blogComments =[];
-      // if (data.objects.length > 0) {
-      //     for (var i = 0; i < data.objects.length; i++) {
-      //         if (data.objects[i].metadata !== null && data.objects[i].metadata.blogslugname === blogSlug) {
-      //             blogComments.push(data.objects[i]);
-      //         }
-      //     }
-      //     console.log(blogComments.length);
-
-          // //create & display separate div for each comment
-          // if (blogComments.length > 0) {
-          //     $("#comments").show();
-          //     $("#blog-comments").empty(); //need this in new function?
-          //     for (var j = 0; j < blogComments.length; j++) {
-          //         var div = document.createElement('div');
-          //         document.body.appendChild(div);
-          //         document.getElementById("blog-comments").appendChild(div);
-          //         div.id = 'blog-comments-' + j;
-          //         $("#blog-comments-" + j).append(blogComments[j].content);
-          //     }
-          // } else {
-          //     $("#comments").hide();
-          //     $("#blog-comments").empty();
-          // }
   },
 
   render: function () {
     var {blogSlug, blogIndex} = this.props;
     return (
-      <div>
+      <div className="container">
         {/* <form onSubmit={this.onFormSubmit}>
           {renderFindGigsButton()}
         </form> */}
-        *Render Comments component*
-        <div>blogIndex... {blogIndex}</div>
-        <div>blogSlug... {blogSlug}</div>
         <div>{this.searchComments()}</div>
       </div>
     );
