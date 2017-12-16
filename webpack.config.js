@@ -34,6 +34,7 @@ module.exports = {
       About: 'app/components/About.jsx',
       Social: 'app/components/Social.jsx',
       cosmic: 'app/api/cosmic.jsx',
+      cosmicComments: 'app/api/cosmicComments.jsx',
       applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']

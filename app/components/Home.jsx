@@ -11,11 +11,12 @@ var Home = React.createClass({ //try not to use .createClass (deprecated)
     return {
       isLoading: true,
       blogs: undefined,
-      blogIndex: 0
+      blogIndex: 0,
+      blogSlug: undefined
     }
   },
 
-  componentWillMount: function (blogs) {
+  componentDidMount: function (blogs) {
     var that = this;
 
     cosmic.getBlogs().then(function (blogs) {
@@ -31,38 +32,39 @@ var Home = React.createClass({ //try not to use .createClass (deprecated)
 
 // TODO add next / prev buttons
 
-  render: function () {
-    var that = this;
-    var {isLoading, blogs, blogIndex} = this.state;
+  renderBlog: function () {
+    var {isLoading, blogs, blogIndex, blogSlug} = this.state;
+    // var that = this;
 
-    function renderBlog () {
-      if (isLoading) {
-        return <h5 className="text-center page-loading">Getting latest blog...</h5>;
-      } else if (blogs) {
-        var {title, created, content} = blogs.objects[0];
-        var image = blogs.objects[0].metadata.hero.url;
-        var author = that.state.blogs.objects[0].metadata.author.title;
-        var displayDate = created.charAt(8) + created.charAt(9) + '/' + created.charAt(5) + created.charAt(6) + '/' + created.charAt(0) + created.charAt(1) + created.charAt(2) + created.charAt(3);
+    if (isLoading) {
+      return <h5 className="text-center page-loading">Getting latest blog...</h5>;
+    } else if (blogs) {
+      var {title, created, content} = blogs.objects[blogIndex];
+      var image = blogs.objects[blogIndex].metadata.hero.url;
+      var author = blogs.objects[blogIndex].metadata.author.title;
+      var displayDate = created.charAt(8) + created.charAt(9) + '/' + created.charAt(5) + created.charAt(6) + '/' + created.charAt(0) + created.charAt(1) + created.charAt(2) + created.charAt(3);
+      var blogSlug = blogs.objects[blogIndex].slug;
 
-        return (
-          <div>
-            <div className="titleHome">{title}</div>
-            <div className="authorHome">{author}</div>
-            <div className="createdHome">{displayDate}</div>
-            <div className="imageHome">
-              <img src={image} alt={"blog image"}></img>
-            </div>
-            <div className="contentHome">{ReactHtmlParser(content)}</div>
-            <div className="clear"></div>
-            <Comments blogIndex={blogIndex}/>
+      return (
+        <div>
+          <div className="titleHome">{title}</div>
+          <div className="authorHome">{author}</div>
+          <div className="createdHome">{displayDate}</div>
+          <div className="imageHome">
+            <img src={image} alt={"blog image"}></img>
           </div>
-        )
-      }
+          <div className="contentHome">{ReactHtmlParser(content)}</div>
+          <div className="clear"></div>
+          <Comments blogIndex={blogIndex} blogSlug={blogSlug}/>
+        </div>
+      )
     }
+  },
 
+  render: function () {
     return (
       <div className="container">
-        {renderBlog()}
+        {this.renderBlog()}
       </div>
     );
   }
