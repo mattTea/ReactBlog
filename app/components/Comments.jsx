@@ -1,13 +1,12 @@
 // Add the blog array index[i] as a prop so that can be referenced to manage prev/next and comments?
 // Like Gigs component using GigSearch component and passing the prop of gigType
 
-// TODO add comments form
-
 var React = require('react');
 
 import ReactHtmlParser from 'react-html-parser';
 
 var cosmicComments = require('cosmicComments');
+var PostComment = require('PostComment')
 
 var Comments = React.createClass({
   propTypes: {
@@ -20,14 +19,6 @@ var Comments = React.createClass({
       isLoading: true
     };
   },
-
-  // onFormSubmit: function (e) {
-  //   e.preventDefault();
-
-    // var gigs = this.refs.gigs; // there are no refs highlighted in the form below?
-
-    // this.props.onSearch(gigs); // if valid, call the parent 'onSearch' function
-  // },
 
   componentDidMount: function (comments) {
     var that = this;
@@ -71,6 +62,7 @@ var Comments = React.createClass({
         <div>
           <h4>comments...</h4>
           <ul>{commentsList}</ul>
+          <PostComment blogSlug={blogSlug}/>
         </div>
       )
     }
@@ -79,10 +71,7 @@ var Comments = React.createClass({
   render: function () {
     var {blogSlug, blogIndex} = this.props;
     return (
-      <div className="container">
-        {/* <form onSubmit={this.onFormSubmit}>
-          {renderFindGigsButton()}
-        </form> */}
+      <div className="containerComments">
         <div>{this.searchComments()}</div>
       </div>
     );

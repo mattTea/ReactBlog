@@ -1,0 +1,43 @@
+button {
+  font-family: Questrial;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #FCF1DD;
+  padding: 0.2rem;
+  width: 7.5em;
+  border-radius: 5px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: rgba(23, 121, 186, 0.1);
+  color: black;
+}
+
+textarea {
+  width: 100%;
+  font-size: 15px;
+  font-family: arial;
+}
+
+@media (max-width: 600px) {
+  /* add style required under 600px width */
+  button {
+    font-size: 11px;
+  }
+  textarea {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 343px) {
+  /* add style required under 343px width */
+  button {
+    font-size: 9px;
+    width: 6em
+  }
+  textarea {
+    font-size: 9px;
+  }
+}

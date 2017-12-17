@@ -28,6 +28,7 @@ module.exports = {
       Footer: 'app/components/Footer.jsx',
       Home: 'app/components/Home.jsx',
       Comments: 'app/components/Comments.jsx',
+      PostComment: 'app/components/PostComment.jsx',
       Blog: 'app/components/Blog.jsx',
       BlogList: 'app/components/BlogList.jsx',
       SideProjects: 'app/components/SideProjects.jsx',
@@ -35,6 +36,7 @@ module.exports = {
       Social: 'app/components/Social.jsx',
       cosmic: 'app/api/cosmic.jsx',
       cosmicComments: 'app/api/cosmicComments.jsx',
+      cosmicPostComments: 'app/api/cosmicPostComments.jsx',
       applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']
