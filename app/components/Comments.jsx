@@ -1,6 +1,3 @@
-// Add the blog array index[i] as a prop so that can be referenced to manage prev/next and comments?
-// Like Gigs component using GigSearch component and passing the prop of gigType
-
 var React = require('react');
 
 import ReactHtmlParser from 'react-html-parser';

@@ -22,6 +22,7 @@ ReactDOM.render(
       <Route path="articles" component={BlogList}/>
       <Route path="side-projects" component={SideProjects}/>
       <Route path="about" component={About}/>
+      <Route path="blog" component={Blog}/>
       <IndexRoute component={Home}/> {/* this renders if none of the above routes are matched */}
     </Route>
   </Router>,
