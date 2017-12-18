@@ -54,12 +54,12 @@ var BlogList = React.createClass({ //try not to use .createClass (deprecated)
 
         const blogListItems = blogItemsArray.map((blogItemsArray, index) =>
           <li key={index}>
-            {/* <Link to="/blog" blogIndex={blogItemsArray.id}> */}
+            {/* link to the top of the page on each blog? */}
+            
             <Link to={{
               pathname: "/blog",
               state: { blogIndex: blogItemsArray.id }
             }}>
-
               <div className="title">{blogItemsArray.title}</div>
               <div className="preview">{ReactHtmlParser(blogItemsArray.preview)}</div>
               <div className="author">{blogItemsArray.author}</div>

@@ -1,0 +1,19 @@
+.prev-next {
+  margin-bottom: 4em;
+  .prev {
+    float: left;
+  }
+  .next {
+    float: right;
+  }
+}
+
+.prevNextNotAvailable {
+  background-color: white;
+  color: grey;
+  cursor: default;
+  button:hover {
+    background-color: white;
+    color: grey;
+  }
+}

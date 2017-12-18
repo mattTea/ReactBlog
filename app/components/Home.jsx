@@ -1,10 +1,9 @@
 var React = require('react');
 
 var Comments = require('Comments');
-
-import ReactHtmlParser from 'react-html-parser';
-
 var cosmic = require('cosmic');
+import ReactHtmlParser from 'react-html-parser';
+var {Link, IndexLink} = require('react-router');
 
 var Home = React.createClass({ //try not to use .createClass (deprecated)
   getInitialState: function () {
@@ -30,11 +29,8 @@ var Home = React.createClass({ //try not to use .createClass (deprecated)
     });
   },
 
-// TODO add next / prev buttons
-
   renderBlog: function () {
     var {isLoading, blogs, blogIndex, blogSlug} = this.state;
-    // var that = this;
 
     if (isLoading) {
       return <h5 className="text-center page-loading">Getting latest blog...</h5>;
@@ -55,6 +51,16 @@ var Home = React.createClass({ //try not to use .createClass (deprecated)
           </div>
           <div className="contentHome">{ReactHtmlParser(content)}</div>
           <div className="clear"></div>
+          <div className="prev-next">
+            <div className="prev">
+              <Link to={{
+                pathname: "/blog",
+                state: { blogIndex: blogIndex+1 }
+              }}>
+                <button>{'<'} Previous</button>
+              </Link>
+            </div>
+          </div>
           <Comments blogIndex={blogIndex} blogSlug={blogSlug}/>
         </div>
       )

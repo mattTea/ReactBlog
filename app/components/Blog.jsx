@@ -1,10 +1,8 @@
 var React = require('react');
 
 var Comments = require('Comments');
-
-import ReactHtmlParser from 'react-html-parser';
-
 var cosmic = require('cosmic');
+import ReactHtmlParser from 'react-html-parser';
 
 var Home = React.createClass({ //try not to use .createClass (deprecated)
   getInitialState: function () {
@@ -30,11 +28,53 @@ var Home = React.createClass({ //try not to use .createClass (deprecated)
     });
   },
 
-// TODO add next / prev buttons
+  handlePrevClick: function () {
+    var {blogIndex} = this.state;
+    this.setState({
+      blogIndex: blogIndex+1
+    });
+  },
+
+  handleNextClick: function () {
+    var {blogIndex} = this.state;
+    this.setState({
+      blogIndex: blogIndex-1
+    });
+  },
+
+  morePrevBlogsButton: function () {
+    var that = this;
+    var {blogs, blogIndex} = this.state;
+    var blogArrayLength = blogs.objects.length-1;
+
+    if (blogIndex != blogArrayLength) {
+      return (
+        <button className="prevNextAvailable" onClick={that.handlePrevClick}>{'<'} Previous</button>
+      );
+    } else {
+      return (
+        <button className="prevNextNotAvailable">{'<'} Previous</button>
+      );
+    }
+  },
+
+  moreNextBlogsButton: function () {
+    var that = this;
+    var {blogs, blogIndex} = this.state;
+
+    if (blogIndex != 0) {
+      return (
+        <button className="prevNextAvailable" onClick={that.handleNextClick}>Next {'>'}</button>
+      );
+    } else {
+      return (
+        <button className="prevNextNotAvailable">Next {'>'}</button>
+      );
+    }
+  },
 
   renderBlog: function () {
     var {isLoading, blogs, blogIndex, blogSlug} = this.state;
-    // var that = this;
 
     if (isLoading) {
       return <h5 className="text-center page-loading">Getting blog...</h5>;
@@ -55,6 +95,14 @@ var Home = React.createClass({ //try not to use .createClass (deprecated)
           </div>
           <div className="contentHome">{ReactHtmlParser(content)}</div>
           <div className="clear"></div>
+          <div className="prev-next">
+            <div className="prev">
+              {this.morePrevBlogsButton()}
+            </div>
+            <div className="next">
+              {this.moreNextBlogsButton()}
+            </div>
+          </div>
           <Comments blogIndex={blogIndex} blogSlug={blogSlug}/>
         </div>
       )
