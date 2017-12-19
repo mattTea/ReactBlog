@@ -8,12 +8,8 @@
   }
 }
 
-.prevNextNotAvailable {
+button.prevNextNotAvailable, button.prevNextNotAvailable:hover{
   background-color: white;
   color: grey;
   cursor: default;
-  button:hover {
-    background-color: white;
-    color: grey;
-  }
 }
