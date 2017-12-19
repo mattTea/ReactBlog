@@ -54,8 +54,7 @@ var BlogList = React.createClass({ //try not to use .createClass (deprecated)
 
         const blogListItems = blogItemsArray.map((blogItemsArray, index) =>
           <li key={index}>
-            {/* link to the top of the page on each blog? */}
-            
+
             <Link to={{
               pathname: "/blog",
               state: { blogIndex: blogItemsArray.id }

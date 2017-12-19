@@ -16,7 +16,7 @@ $(document).foundation();
 require('style!css!sass!applicationStyles'); //applicationStyles module loaded using necessary loaders
 
 ReactDOM.render(
-  <Router history={hashHistory}>
+  <Router history={hashHistory} onUpdate={() => window.scrollTo(0, 0)}>
     <Route path="/" component={Main}>
       <Route path="home" component={Home}/>
       <Route path="articles" component={BlogList}/>

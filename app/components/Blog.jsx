@@ -14,6 +14,10 @@ var Home = React.createClass({ //try not to use .createClass (deprecated)
     }
   },
 
+  componentDidUpdate: function () {
+    window.scrollTo(0, 0)
+  },
+
   componentDidMount: function (blogs) {
     var that = this;
 
