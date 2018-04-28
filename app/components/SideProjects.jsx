@@ -19,6 +19,15 @@ var SideProjects = () => {
         <div className="clear"></div>
       </div></a>
 
+      <a href="https://github.com/mattTea/RetroBoard" target="_blank"><div className="proj-container">
+        <div className="proj-thumb"><img src={require('../../public/images/retro-board.png')}></img></div>
+        <div className="proj-content">
+          <h4>Retro Board</h4>
+          <p>A React workflow board web app with Redux and HTML drag and drop.</p>
+        </div>
+        <div className="clear"></div>
+      </div></a>
+
       <a href="https://blog.matttea.com" target="_blank"><div className="proj-container">
         <div className="proj-thumb"><img src={require('../../public/images/B.png')}></img></div>
         <div className="proj-content">
