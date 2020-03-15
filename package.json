@@ -9,6 +9,10 @@
     "watch": "webpack --watch",
     "build": "webpack"
   },
+  "engines": {
+    "node": "10.16.0",
+    "npm": "6.9.0"
+  },
   "author": "Matt Thompson",
   "license": "MIT",
   "dependencies": {
