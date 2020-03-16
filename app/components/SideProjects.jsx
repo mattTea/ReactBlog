@@ -10,7 +10,7 @@ var SideProjects = () => {
         <p><br/>There's mention of numerous side projects throughout this blog. Browse them all here.<br/></p>
       </div>
 
-      <a href="https://tinygigs.matttea.com/" target="_blank"><div className="proj-container">
+      <a href="http://tinygigs.matttea.com/" target="_blank"><div className="proj-container">
         <div className="proj-thumb"><img src={require('../../public/images/CaravanGig2.png')}></img></div>
         <div className="proj-content">
           <h4>Tiny Gigs</h4>
@@ -28,7 +28,7 @@ var SideProjects = () => {
         <div className="clear"></div>
       </div></a>
 
-      <a href="https://blog.matttea.com" target="_blank"><div className="proj-container">
+      <a href="http://blog.matttea.com" target="_blank"><div className="proj-container">
         <div className="proj-thumb"><img src={require('../../public/images/B.png')}></img></div>
         <div className="proj-content">
           <h4>My Blog</h4>
